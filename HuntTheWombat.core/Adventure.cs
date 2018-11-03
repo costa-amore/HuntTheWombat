@@ -3,18 +3,19 @@
     public class Adventure
     {
         #region construction
-        private readonly Map Map;
+        private readonly Map map;
 
         public Adventure():this(new NSEWRoomBuilder()) { }
         public Adventure(IRoomBuilder roomBuilder)
         {
             HunterLocation = new NoLocation();
-            Map = new Map(roomBuilder);
+            map = new Map(roomBuilder);
         }
         #endregion
 
         public Location HunterLocation { get; private set; }
-        public Room HunterRoom { get { return Map.FindRoomBy(HunterLocation); } }
+        public Room HunterRoom { get { return map.FindRoomBy(HunterLocation); } }
+        public Map Map => map;
 
         public Hunter CreateHunter()
         {

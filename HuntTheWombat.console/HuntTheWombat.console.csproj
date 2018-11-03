@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HuntTheWombat.core\HuntTheWombat.core.csproj" />
+  </ItemGroup>
+
 </Project>
