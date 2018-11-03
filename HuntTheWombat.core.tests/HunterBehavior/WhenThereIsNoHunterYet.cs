@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace HuntTheWombat.core.tests
+namespace HuntTheWombat.core.tests.HunterBahavior
 {
     public class WhenThereIsNoHunterYet
     {

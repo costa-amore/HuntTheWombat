@@ -1,8 +1,8 @@
 using Xunit;
 
-namespace HuntTheWombat.core.tests
+namespace HuntTheWombat.core.tests.HunterBahavior
 {
-    public class WhenHunterMovesinADirectionWhereThereIsNoPassage: AaaStyleTest
+    public class WhenHunterMovesInADirectionWhereThereIsNoPassage: AaaStyleTest
     {
         #region arrange
         private Passage direction;

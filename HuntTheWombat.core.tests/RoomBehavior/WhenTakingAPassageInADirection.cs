@@ -5,7 +5,7 @@ namespace HuntTheWombat.core.tests.RoomBehavior
     public class WhenTakingAPassageInADirection
     {
         [Fact]
-        public void TheRoomEnteredShould_HaveAPassageInTheOppositeDirection()
+        public void TheRoomEnteredShould_HaveAPassageBackToThePreviousRoom()
         {
             //arrange
             var direction = Passage.RandomDirection();
