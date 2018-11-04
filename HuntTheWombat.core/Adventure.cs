@@ -17,6 +17,8 @@
         public Room HunterRoom { get { return map.FindRoomBy(HunterLocation); } }
         public Map Map => map;
 
+        public int HunterLife { get { return Hunter.Health; } }
+
         public Hunter CreateHunter()
         {
             var hunter = new Hunter(this);
@@ -26,9 +28,9 @@
             return hunter;
         }
 
-        #region Hunter Moves around 
-        internal void HunterMovesThrough(Passage passage) { HunterLocation = Move(HunterLocation, passage); }
+        public void HunterMovesThrough(Passage passage) { HunterLocation = Move(HunterLocation, passage); }
 
+        #region Hunter Moves around 
         private Location Move(Location fromLocation, Passage passage)
         {
             if (!Room.Discovered(Map.FindRoomBy(fromLocation))) throw new HuntersRoomNotFoundException();

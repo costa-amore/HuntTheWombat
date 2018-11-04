@@ -10,11 +10,12 @@ namespace HuntTheWombat.core
         public Hunter(Adventure adventure)
         {
             this.adventure = adventure;
+            Health = 10;
         }
         #endregion
 
-        #region public interface
+        public static int Health { get; internal set; }
+
         public void Move(Passage passage) { adventure.HunterMovesThrough(passage); }
-        #endregion
     }
 }
